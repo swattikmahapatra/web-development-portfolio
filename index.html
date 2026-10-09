@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student portfolio and resume website">
+  <title>My Portfolio | Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home">MyPortfolio<span>.</span></a>
+      <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-button" type="button" aria-label="Toggle light and dark theme">☾ Theme</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">HELLO, I'M</p>
+          <h1>Swattik Mahapatra</h1>
+          <h2>Computer Science Student &amp; Aspiring Developer</h2>
+          <p class="intro">I enjoy learning how websites work and turning ideas into useful, easy-to-use digital experiences. This portfolio is a place to share my skills, projects, and progress.</p>
+          <div class="hero-actions"><a class="button primary" href="#projects">View my work</a><a class="button secondary" href="#contact">Contact me</a></div>
+        </div>
+        <aside class="hero-card">
+          <div class="avatar" aria-hidden="true">SM</div>
+          <p class="card-label">CURRENT FOCUS</p>
+          <h3>Web Development</h3>
+          <p>HTML · CSS · JavaScript · React</p>
+          <div class="availability"><span></span> Always learning</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <p class="eyebrow">A LITTLE ABOUT ME</p><h2 class="section-title">Curious by nature. Building step by step.</h2>
+        <p>I am a Computer Science student who likes understanding how technology solves everyday problems. I am strengthening my programming fundamentals while practising front-end development through small projects. I value readable code, consistent practice, and learning from mistakes.</p>
+        <div class="info-grid"><div class="info-box"><strong>Education</strong><span>B.Tech in Computer Science</span></div><div class="info-box"><strong>Interests</strong><span>Web development, problem solving, technology</span></div><div class="info-box"><strong>Approach</strong><span>Learn, build, test, improve</span></div></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section muted">
+      <div class="container"><p class="eyebrow">WHAT I'M LEARNING</p><h2 class="section-title">Skills</h2>
+        <div class="skill-grid">
+          <article class="skill-card"><h3>HTML</h3><p>Semantic structure and accessible page content.</p></article>
+          <article class="skill-card"><h3>CSS</h3><p>Responsive layouts, styling, and themes.</p></article>
+          <article class="skill-card"><h3>JavaScript</h3><p>DOM interaction, form handling, and browser storage.</p></article>
+          <article class="skill-card"><h3>React</h3><p>Reusable components, props, and state.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container"><p class="eyebrow">SELECTED WORK</p><h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <article class="project-card"><span class="project-number">01</span><h3>Portfolio Website</h3><p>A responsive personal website with a contact form, theme switcher, and response dashboard.</p><span class="tag">HTML · CSS · JavaScript</span></article>
+          <article class="project-card"><span class="project-number">02</span><h3>Contact Cards</h3><p>A React app that takes user details and displays them as reusable contact cards.</p><span class="tag">React · Components</span></article>
+          <article class="project-card"><span class="project-number">03</span><h3>Like / Unlike Cards</h3><p>A small React project that uses state to update the like status interactively.</p><span class="tag">React · useState</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section muted">
+      <div class="container contact-grid">
+        <div><p class="eyebrow">LET'S CONNECT</p><h2 class="section-title">Send me a message</h2><p>Use this form to share a question, suggestion, or opportunity. The demo stores messages in this browser until a Google Apps Script endpoint is configured.</p></div>
+        <form id="contactForm" class="form-card">
+          <label for="senderName">Your name</label><input id="senderName" name="name" required maxlength="80" placeholder="Enter your name">
+          <label for="senderEmail">Email address</label><input id="senderEmail" name="email" type="email" required maxlength="120" placeholder="you@example.com">
+          <label for="senderMessage">Message</label><textarea id="senderMessage" name="message" required maxlength="1500" rows="5" placeholder="Write your message here..."></textarea>
+          <button class="button primary full" type="submit">Send message</button><p id="formStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="admin" class="section">
+      <div class="container narrow">
+        <p class="eyebrow">SITE OWNER</p><h2 class="section-title">Admin responses</h2>
+        <div id="adminLoginPanel" class="form-card admin-card">
+          <p>Sign in to view messages submitted through this demo.</p>
+          <form id="adminForm"><label for="adminPin">Admin PIN</label><input id="adminPin" type="password" required placeholder="Enter admin PIN"><button class="button primary" type="submit">Sign in</button><p id="adminStatus" class="form-status" role="status"></p></form>
+        </div>
+        <div id="responsesPanel" class="responses-panel" hidden>
+          <div class="response-heading"><h3>Received messages</h3><button id="logoutButton" class="button secondary" type="button">Log out</button></div>
+          <p class="small-note">Messages are shown newest first. The local demo can only show messages stored in this browser.</p>
+          <div id="responsesList"></div>
+          <button id="refreshResponses" class="button secondary" type="button">Refresh responses</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><p>Designed and built as a web development learning project.</p><a href="#home">Back to top ↑</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
