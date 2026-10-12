@@ -5,7 +5,7 @@
 */
 const ADMIN_PIN = "2468";
 const STORAGE_KEY = "portfolioMessages";
-const APPS_SCRIPT_URL = ""; // Example: https://script.google.com/macros/s/DEPLOYMENT_ID/exec
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4CWar-AnF2rq5dzUIb96fXpzkzZV6lPZviipyI_MxcCajYkU3MVQp0eVxDY6yKxl7ow/exec"; // Example: https://script.google.com/macros/s/DEPLOYMENT_ID/exec
 
 const $ = (selector) => document.querySelector(selector);
 const contactForm = $("#contactForm");
